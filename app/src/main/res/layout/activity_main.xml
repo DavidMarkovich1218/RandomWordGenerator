@@ -8,44 +8,32 @@
 
     <TextView
         android:id="@+id/changeText"
-        android:layout_width="346dp"
-        android:layout_height="80dp"
+        android:layout_width="338dp"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:text="Hello"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182" />
-
-    <Button
-        android:id="@+id/btnChangeText"
-        android:layout_width="229dp"
-        android:layout_height="104dp"
-        android:layout_marginStart="91dp"
-        android:layout_marginEnd="91dp"
-        android:onClick="onClcChange"
-        android:text="Random Word"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.757" />
+        app:layout_constraintVertical_bias="0.185" />
 
     <EditText
         android:id="@+id/editWordLenght"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="169dp"
-        android:layout_marginTop="268dp"
         android:layout_marginEnd="33dp"
         android:ems="10"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.371" />
 
     <EditText
         android:id="@+id/editStartWith"
@@ -56,34 +44,76 @@
         android:layout_marginEnd="33dp"
         android:ems="10"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editWordLenght" />
+        app:layout_constraintTop_toBottomOf="@+id/editWordLenght"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="122dp"
-        android:layout_height="37dp"
+        android:layout_width="123dp"
+        android:layout_height="25dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="76dp"
-        android:text="Word Lenght"
+        android:text="Word Lenght:"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editWordLenght"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/changeText" />
+        app:layout_constraintTop_toBottomOf="@+id/changeText"
+        app:layout_constraintVertical_bias="0.002" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="124dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="36dp"
-        android:text="Begins With"
+        android:layout_width="112dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:text="Begins With:"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/editStartWith"
-        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintHorizontal_bias="0.368"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/btnChangeText"
+        android:layout_width="194dp"
+        android:layout_height="124dp"
+        android:background="@drawable/cycle_btn"
+
+        android:onClick="onClcChange"
+        android:text="Random Word"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.799" />
+
+    <Button
+        android:id="@+id/favBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favorite"
+        app:layout_constraintBottom_toTopOf="@+id/btnChangeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStartWith"
+        app:layout_constraintVertical_bias="0.562" />
+
+    <Button
+        android:id="@+id/settingsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="Settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnChangeText"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

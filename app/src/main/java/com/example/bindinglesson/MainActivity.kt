@@ -1,5 +1,6 @@
 package com.example.bindinglesson
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.JsonWriter
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
                 .asString();
             var all = responce.body
 
+
             activityUiThread {
                 bindingClass.changeText.text = all.toString()
             }
@@ -53,6 +55,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(bindingClass.root)
         apiRequestRandom()
 
+        bindingClass.favBtn.setOnClickListener(){
+            val intent = Intent(this, Favorite::class.java)
+            startActivity(intent)
+        }
+        bindingClass.settingsBtn.setOnClickListener(){
+            val intent = Intent(this, Settings::class.java)
+            startActivity(intent)
+        }
     }
 
 
